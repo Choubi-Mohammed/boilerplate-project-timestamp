@@ -37,7 +37,7 @@ app.get("/api/:date?",(req,res)=>{
     }
   }
   if(isNaN(date.getTime())){
-    return res.json({message :"invald Date"})
+    return res.json({error :"invald Date"})
   }
   res.json({
     unix: date.getTime(),
